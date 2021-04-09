@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "1039072633308",
+    "project_id": "agricultured-d7a45",
+    "storage_bucket": "agricultured-d7a45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039072633308:android:c2dc9d780a6774c7476f19",
+        "android_client_info": {
+          "package_name": "com.agricultured.agricultured"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039072633308-ji8iuem0g588q9b8rof63vnk7abca3tg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agricultured.agricultured",
+            "certificate_hash": "a72daaf85cd8c27b0c9a44287f27f08d2309cd1e"
+          }
+        },
+        {
+          "client_id": "1039072633308-f6mht00prnar5j9vu7am2u0gjp6fe72n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6dw3WQC4EFZu38kqvAtw3wf9QsR7_rlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039072633308-f6mht00prnar5j9vu7am2u0gjp6fe72n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039072633308:android:e9e5e633ef3b6311476f19",
+        "android_client_info": {
+          "package_name": "com.agricultured.agricultured.v1.beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039072633308-f6mht00prnar5j9vu7am2u0gjp6fe72n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6dw3WQC4EFZu38kqvAtw3wf9QsR7_rlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039072633308-f6mht00prnar5j9vu7am2u0gjp6fe72n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
