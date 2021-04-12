@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSignOut;
     private int RC_SIGN_IN = 1;
     FirebaseAuth.AuthStateListener authStateListener;
+    private TextView expertSignInText;
 
     @Override
     protected void onStart() {
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
         signInButton = findViewById(R.id.sign_in_button);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        expertSignInText = findViewById(R.id.expertSignInText);
 
         authStateListener = firebaseAuth -> {
             FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -80,6 +84,18 @@ public class MainActivity extends AppCompatActivity {
                 signIn();
             }
         });
+
+        expertSignInText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                expertSignIn();
+            }
+        });
+    }
+
+    private void expertSignIn() {
+        Intent intentExpert = new Intent(this, ExpertSignInActivity.class);
+        startActivity(intentExpert);
     }
 
     private void signIn() {

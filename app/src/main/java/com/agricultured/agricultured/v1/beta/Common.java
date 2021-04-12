@@ -8,6 +8,8 @@ import android.text.style.StyleSpan;
 import android.widget.TextView;
 
 public class Common {
+    public static ExpertUserModel currentExpertUser;
+
     public static void setSpanString(String welcome, String name, TextView txt_user) {
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(welcome);
@@ -17,5 +19,7 @@ public class Common {
         builder.append(spannableString);
         txt_user.setText(builder, TextView.BufferType.SPANNABLE);
     }
+    
+    public static final String EXPERT_REF = "Expert";
 
 }

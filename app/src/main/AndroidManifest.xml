@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.agricultured.agricultured.v1.beta">
 
@@ -15,14 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.ImageClassification">
+        <activity android:name=".HomeActivityExpert"></activity>
+        <activity android:name=".ExpertSignInActivity" />
         <activity
-            android:name="com.agricultured.agricultured.v1.beta.ClassifierActivity"
+            android:name=".ClassifierActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".HomeActivity">
-
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,4 +35,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 </manifest>
