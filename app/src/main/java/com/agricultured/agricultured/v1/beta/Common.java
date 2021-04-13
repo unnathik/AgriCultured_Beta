@@ -7,6 +7,9 @@ import android.text.Spanned;
 import android.text.style.StyleSpan;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Common {
     public static ExpertUserModel currentExpertUser;
 
@@ -22,4 +25,10 @@ public class Common {
     
     public static final String EXPERT_REF = "Expert";
 
+    public static String convertUnixToDate(int dt) {
+        Date date = new Date(dt * 1000L);
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm, EEE");
+        String formatted = sdf.format(date);
+        return formatted;
+    }
 }

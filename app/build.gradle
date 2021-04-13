@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
 
 project.ext.ASSET_DIR = projectDir.toString() + '/src/main/assets'
 
@@ -56,4 +57,7 @@ dependencies {
     implementation('org.tensorflow:tensorflow-lite-gpu:0.0.0-nightly') { changing = true }
     implementation('org.tensorflow:tensorflow-lite-support:0.0.0-nightly') { changing = true }
     implementation 'com.firebaseui:firebase-ui-auth:7.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
 }
