@@ -7,7 +7,6 @@ import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.agricultured.agricultured.v1.beta.ui.weather.TodayWeatherFragment;
-import com.agricultured.agricultured.v1.beta.ui.weather.TomorrowWeatherFragment;
 import com.agricultured.agricultured.v1.beta.ui.weather.WeekWeatherFragment;
 
 public class FragmentAdapter extends FragmentStateAdapter {

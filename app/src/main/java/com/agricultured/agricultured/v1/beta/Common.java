@@ -1,6 +1,7 @@
 package com.agricultured.agricultured.v1.beta;
 
 import android.graphics.Typeface;
+import android.location.Location;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -12,6 +13,7 @@ import java.util.Date;
 
 public class Common {
     public static ExpertUserModel currentExpertUser;
+    public static final String APP_ID = "4a8018b7b1640836e960924451e3d0b4";
 
     public static void setSpanString(String welcome, String name, TextView txt_user) {
         SpannableStringBuilder builder = new SpannableStringBuilder();

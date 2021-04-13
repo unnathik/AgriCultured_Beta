@@ -52,7 +52,6 @@ public class TodayWeatherFragment extends Fragment {
     String appId = "4a8018b7b1640836e960924451e3d0b4";
     EditText etCity;
     private final String url = "http://api.openweathermap.org/data/2.5/weather";
-    private final String onecallUrl = "http://api.openweathermap.org/data/2.5/onecall";
 
     DecimalFormat df = new DecimalFormat("#.##");
     ImageView searchBtnLocation;
