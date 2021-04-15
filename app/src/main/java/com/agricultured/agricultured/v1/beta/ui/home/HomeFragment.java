@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.agricultured.agricultured.v1.beta.ClassifierActivity;
 import com.agricultured.agricultured.v1.beta.R;
+import com.agricultured.agricultured.v1.beta.RemindersActivity;
 import com.agricultured.agricultured.v1.beta.WeatherFragment;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -41,6 +42,7 @@ public class HomeFragment extends Fragment {
 
         CardView detectionBtn = root.findViewById(R.id.detection_btn);
         CardView weatherBtn = root.findViewById(R.id.weather_btn);
+        CardView reminderBtn = root.findViewById(R.id.reminder_btn);
 
         TextView txt_user_welcome = (TextView) root.findViewById(R.id.txt_user_welcome);
         if (acct.getDisplayName() != null) {
@@ -65,6 +67,14 @@ public class HomeFragment extends Fragment {
                         .getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, new WeatherFragment());
                 fragmentTransaction.commit();
+            }
+        });
+
+        reminderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), RemindersActivity.class);
+                startActivity(intent);
             }
         });
 

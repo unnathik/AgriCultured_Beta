@@ -1,5 +1,5 @@
 <resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
-<string name="app_name" translation_description="Image Classification demo app [CHAR_LIMIT=40]">AgriCultured</string>
+    <string name="app_name" translation_description="Image Classification demo app [CHAR_LIMIT=40]">AgriCultured</string>
     <string name="camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
     <string name="gpu_quant_error" translation_description="Error regarding GPU support for Quant models[CHAR_LIMIT=60]">GPU does not support quantized models yet.</string>
     <string name="model" translatable="false">Model:</string>
