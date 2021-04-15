@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.weather.WeatherFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.news.NewsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
+            android:id="@+id/tab_layout_news"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#30333D"
@@ -21,11 +21,10 @@
             app:tabTextColor="@color/white" />
 
         <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager2"
+            android:id="@+id/view_pager2_news"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </LinearLayout>
-
 
 </FrameLayout>

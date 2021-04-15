@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.agricultured.agricultured.v1.beta.ui.calendar.CalendarFragment;
+import com.agricultured.agricultured.v1.beta.ui.news.NewsFragment;
 import com.agricultured.agricultured.v1.beta.ui.chat.ChatFragment;
 import com.agricultured.agricultured.v1.beta.ui.account.AccountFragment;
 import com.agricultured.agricultured.v1.beta.ui.home.HomeFragment;
@@ -38,8 +38,8 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.nav_chat:
                         selectedFragment = new ChatFragment();
                         break;
-                    case R.id.nav_calendar:
-                        selectedFragment = new CalendarFragment();
+                    case R.id.nav_news:
+                        selectedFragment = new NewsFragment();
                 }
 
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();

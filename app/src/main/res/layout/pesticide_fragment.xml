@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.calculators.PesticideFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate the exact quantity of pesticides/fungicides/pesticides required for your farm based on the different companies' active ingredients to ensure appropriate use of these resources." />
+
+        <EditText
+            android:id="@+id/activeIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Active Ingredient (%)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/recommendedQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Recommended Quantity (g/L or ml/L)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/tankVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Tank Volume (L)"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/pesticideCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate" />
+
+        <TextView
+            android:id="@+id/resultsPesticide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/teal_700" />
+    </LinearLayout>
+
+</FrameLayout>

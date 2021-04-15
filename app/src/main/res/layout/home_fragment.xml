@@ -158,6 +158,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/calculator_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -181,7 +182,7 @@
                             android:fontFamily="@font/roboto_medium"
                             android:foregroundGravity="center"
                             android:gravity="center"
-                            android:text="FERTILISERS"
+                            android:text="CALCULATORS"
                             android:textColor="@color/white" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -202,6 +203,19 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="Your Reminders"
                 android:textColor="#474747" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create reminders!" />
+
+            <ListView
+                android:id="@+id/listViewReminders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarAlwaysDrawHorizontalTrack="true" />
+
         </LinearLayout>
     </LinearLayout>
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.calculators.SeedRateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate the exact quantity of seeds required for your farm based on seed test weight and germination of the seeds." />
+
+        <EditText
+            android:id="@+id/plantPopulation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Required plant population (/ha)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/germinationPercentage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Germination percentage (%)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/seedsPerHill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="No. of Seeds per Hill"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/grainWeight1000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Weight of 1000 Seeds (g)"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/seedRateCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate" />
+
+        <TextView
+            android:id="@+id/resultsSeedRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/teal_700" />
+    </LinearLayout>
+
+</FrameLayout>

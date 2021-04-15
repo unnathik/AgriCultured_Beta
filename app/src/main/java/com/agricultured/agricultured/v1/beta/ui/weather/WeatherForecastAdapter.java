@@ -1,4 +1,4 @@
-package com.agricultured.agricultured.v1.beta;
+package com.agricultured.agricultured.v1.beta.ui.weather;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,10 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.agricultured.agricultured.v1.beta.Common;
+import com.agricultured.agricultured.v1.beta.R;
 import com.agricultured.agricultured.v1.beta.model.WeatherForecastResult;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.squareup.picasso.Picasso;
 
 public class WeatherForecastAdapter extends RecyclerView.Adapter<WeatherForecastAdapter.MyViewHolder>{
     Context context;
