@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -21,12 +21,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.ImageClassification">
-        <activity android:name=".NewReminderActivity"
+        <activity android:name=".DiscussionActivity"
+            android:fitsSystemWindows="true"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        </activity>
+        <activity
+            android:name=".NewReminderActivity"
             android:label="Add Reminder"
             android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity"/>
+                android:value=".HomeActivity" />
         </activity>
         <activity android:name=".RemindersActivity" />
         <activity android:name=".HomeActivityExpert" />
@@ -43,14 +49,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <provider
-            android:authorities="com.agricultured.agricultured.v1.beta"
             android:name=".data.AlarmReminderProvider"
-            android:exported="false"/>
-        
-        <service android:name=".ReminderAlarmService"
-            android:exported="false"/>
+            android:authorities="com.agricultured.agricultured.v1.beta"
+            android:exported="false" />
+
+        <service
+            android:name=".ReminderAlarmService"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

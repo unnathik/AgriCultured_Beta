@@ -15,9 +15,8 @@ import com.amulyakhare.textdrawable.util.ColorGenerator;
 
 public class AlarmCursorAdapter extends CursorAdapter {
     private TextView mTitleText, mDateAndTimeText, mRepeatInfoText;
-    private ImageView mActiveImage, mThumbnailImage;
+    private ImageView mActiveImage;
     private ColorGenerator mColorGenerator = ColorGenerator.DEFAULT;
-    private TextDrawable mDrawableBuilder;
 
     public AlarmCursorAdapter(Context context, Cursor c) {
         super(context, c, 0);
@@ -34,7 +33,6 @@ public class AlarmCursorAdapter extends CursorAdapter {
         mDateAndTimeText = (TextView) view.findViewById(R.id.recycle_dt_reminder);
         mRepeatInfoText = (TextView) view.findViewById(R.id.recycle_repeat_info);
         mActiveImage = (ImageView) view.findViewById(R.id.activeImage);
-        mThumbnailImage = (ImageView) view.findViewById(R.id.thumbnail_image);
 
         int titleColumnIndex = cursor.getColumnIndex(AlarmReminderContract.AlarmReminderEntry.KEY_TITLE);
         int dateColumnIndex = cursor.getColumnIndex(AlarmReminderContract.AlarmReminderEntry.KEY_DATE);
@@ -62,9 +60,9 @@ public class AlarmCursorAdapter extends CursorAdapter {
 
     private void setActiveImage(String active) {
         if (active.equals("true")) {
-            mActiveImage.setImageResource(R.drawable.ic_baseline_notifications_active_24);
+            mActiveImage.setImageResource(R.drawable.on_switch);
         } else if (active.equals("false")) {
-            mActiveImage.setImageResource(R.drawable.ic_baseline_notifications_off_24);
+            mActiveImage.setImageResource(R.drawable.off_switch);
         }
     }
 
@@ -87,12 +85,6 @@ public class AlarmCursorAdapter extends CursorAdapter {
         if (title != null && !title.isEmpty()) {
             letter = title.substring(0, 1);
         }
-
-        int color = mColorGenerator.getRandomColor();
-
-        mDrawableBuilder = TextDrawable.builder()
-                .buildRound(letter, color);
-        mThumbnailImage.setImageDrawable(mDrawableBuilder);
     }
 
 

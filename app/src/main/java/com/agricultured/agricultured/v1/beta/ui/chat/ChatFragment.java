@@ -7,14 +7,19 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.agricultured.agricultured.v1.beta.R;
+import com.agricultured.agricultured.v1.beta.ui.calculators.CalculatorsFragment;
+import com.agricultured.agricultured.v1.beta.ui.communitychat.CommunityChatFragment;
 
 public class ChatFragment extends Fragment {
 
     private ChatViewModel mViewModel;
+    private CardView communityChatNav;
 
     public static ChatFragment newInstance() {
         return new ChatFragment();
@@ -23,7 +28,21 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.chat_fragment, container, false);
+        View root = inflater.inflate(R.layout.chat_fragment, container, false);
+
+        communityChatNav = root.findViewById(R.id.communityChatBtn);
+
+        communityChatNav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new CommunityChatFragment());
+                fragmentTransaction.commit();
+            }
+        });
+
+        return root;
     }
 
     @Override
