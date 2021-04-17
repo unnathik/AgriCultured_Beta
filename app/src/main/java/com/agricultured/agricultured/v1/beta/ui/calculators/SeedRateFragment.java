@@ -1,5 +1,6 @@
 package com.agricultured.agricultured.v1.beta.ui.calculators;
 
+import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class SeedRateFragment extends Fragment {
     private EditText germinationPercentage;
     private EditText seedsPerHill;
     private EditText grainWeight1000;
-    private Button seedRateCalculate;
+    private CardView seedRateCalculate;
     private TextView resultsSeedRate;
 
     public static SeedRateFragment newInstance() {
@@ -70,7 +71,7 @@ public class SeedRateFragment extends Fragment {
                     double kgSeedRate = (plantPopulationDouble * seedsPerHillDouble * grainWeight1000Double* 100) / (germinationPercentageDouble * 1000 * 1000);
                     double lbsSeedRate = (Math.round(kgSeedRate * 100.0) / 100.0) * 2.205;
 
-                    resultsSeedRate.setText("" + Math.round(kgSeedRate * 100.0) / 100.0 + "kg/ha" + " OR " +
+                    resultsSeedRate.setText("Result:\n" + Math.round(kgSeedRate * 100.0) / 100.0 + "kg/ha" + " or " +
                             Math.round(lbsSeedRate * 100.0) / 100.0 + "lbs/ha");
                 }
             }

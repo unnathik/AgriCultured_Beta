@@ -1,5 +1,6 @@
 package com.agricultured.agricultured.v1.beta.ui.calculators;
 
+import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -23,7 +24,7 @@ public class PlantPopulationFragment extends Fragment {
     private PlantPopulationViewModel mViewModel;
     private EditText rowToRowSpace;
     private EditText plantToPlantSpace;
-    private Button btnPopCalculate;
+    private CardView btnPopCalculate;
     private TextView popTextView;
 
     public static PlantPopulationFragment newInstance() {
@@ -55,7 +56,7 @@ public class PlantPopulationFragment extends Fragment {
                     double hectarePlantPop = 10000 / (rowToRowSpaceDouble * plantToPlantSpaceDouble);
                     double acrePlantPop = 4047 / (rowToRowSpaceDouble * plantToPlantSpaceDouble);
 
-                    popTextView.setText(Math.round(hectarePlantPop * 100.0) / 100.0 + "/ha " + "OR " +
+                    popTextView.setText("Result:\n" + Math.round(hectarePlantPop * 100.0) / 100.0 + "/ha " + "or " +
                             Math.round(acrePlantPop * 100.0) / 100.0 + "/a");
                 }
             }

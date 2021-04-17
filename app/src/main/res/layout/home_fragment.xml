@@ -58,19 +58,15 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal|center_vertical"
-                android:alignmentMode="alignMargins"
                 android:columnCount="2"
                 android:columnOrderPreserved="false"
-                android:foregroundGravity="center_vertical|center|center_horizontal"
-                android:paddingLeft="40dp"
-                android:paddingTop="30dp"
+                android:paddingTop="15dp"
                 android:rowCount="2">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/detection_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="140dp"
+                    android:layout_height="75dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
@@ -98,14 +94,14 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/weather_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="75dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp"
-                    android:id="@+id/weather_btn">
+                    app:cardElevation="8dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -129,8 +125,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/reminder_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="140dp"
+                    android:layout_height="75dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
@@ -159,8 +155,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/calculator_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="140dp"
+                    android:layout_height="75dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"

@@ -1,5 +1,6 @@
 package com.agricultured.agricultured.v1.beta.ui.calculators;
 
+import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -24,7 +25,7 @@ public class FertilizerFragment extends Fragment {
     private EditText nitrogenFertilizer;
     private EditText phosphorusFertilizer;
     private EditText potassiumFertilizer;
-    private Button btnFertilizerCalculate;
+    private CardView btnFertilizerCalculate;
     private TextView pesticideCombo1TextView;
     private TextView pesticideCombo2TextView;
     private TextView pesticideCombo3TextView;
@@ -63,28 +64,28 @@ public class FertilizerFragment extends Fragment {
                 double DAPValue = (100.0 / 46.0) * phosphorusFertilizerDouble;
                 double UreaValue = (100.0 / 46.0) * (nitrogenFertilizerDouble - (18.0 / 100.0) * DAPValue);
                 pesticideCombo1TextView.setText("Combination 1:\n" + "Urea: " + Math.round(UreaValue * 100.0) / 100.0 + "kg\n"
-                + "DAP: " + Math.round(DAPValue * 100.0) / 100.0 + "kg\n" + "MOP: " + Math.round(MOPValue * 100.0) / 100.0 + "kg\n");
+                + "DAP: " + Math.round(DAPValue * 100.0) / 100.0 + "kg\n" + "MOP: " + Math.round(MOPValue * 100.0) / 100.0 + "kg");
 
                 //urea, SSP, MOP
                 double MOPValueCombo2 = (100.0 / 60.0) * potassiumFertilizerDouble;
                 double SSPValue = (100.0 / 16.0) * phosphorusFertilizerDouble;
                 double UreaValueCombo2 = (100.0 / 46.0) * nitrogenFertilizerDouble;
                 pesticideCombo2TextView.setText("Combination 2:\n" + "Urea: " + Math.round(UreaValueCombo2 * 100.0) / 100.0 + "kg\n"
-                        + "SSP: " + Math.round(SSPValue * 100.0) / 100.0 + "kg\n" + "MOP: " + Math.round(MOPValueCombo2 * 100.0) / 100.0 + "kg\n");
+                        + "SSP: " + Math.round(SSPValue * 100.0) / 100.0 + "kg\n" + "MOP: " + Math.round(MOPValueCombo2 * 100.0) / 100.0 + "kg");
 
                 //CAN, SSP, MOP
                 double MOPValueCombo3 = (100.0 / 60.0) * potassiumFertilizerDouble;
                 double SSPValue3 = (100.0 / 16.0) * phosphorusFertilizerDouble;
                 double CANValueCombo3 = (100.0 / 26.0) * nitrogenFertilizerDouble;
                 pesticideCombo3TextView.setText("Combination 3:\n" + "CAN: " + Math.round(CANValueCombo3 * 100.0) / 100.0 + "kg\n"
-                        + "SSP: " + Math.round(SSPValue3 * 100.0) / 100.0 + "kg\n" + "MOP: " + Math.round(MOPValueCombo3 * 100.0) / 100.0 + "kg\n");
+                        + "SSP: " + Math.round(SSPValue3 * 100.0) / 100.0 + "kg\n" + "MOP: " + Math.round(MOPValueCombo3 * 100.0) / 100.0 + "kg");
 
                 //CAN, Rock Phosphate, MOP
                 double MOPValueCombo4 = (100.0 / 60.0) * potassiumFertilizerDouble;
                 double CANValueCombo4 = (100.0 / 26.0) * nitrogenFertilizerDouble;
                 double RockPhosphateCombo4 = (100.0 / 20.0) * phosphorusFertilizerDouble;
                 pesticideCombo4TextView.setText("Combination 4:\n" + "CAN: " + Math.round(CANValueCombo4 * 100.0) / 100.0 + "kg\n"
-                        + "Rock Phosphate: " + Math.round(RockPhosphateCombo4 * 100.0) / 100.0 + "kg\n" + "MOP: " + Math.round(MOPValueCombo4 * 100.0) / 100.0 + "kg\n");
+                        + "Rock Phosphate: " + Math.round(RockPhosphateCombo4 * 100.0) / 100.0 + "kg\n" + "MOP: " + Math.round(MOPValueCombo4 * 100.0) / 100.0 + "kg");
             }
         });
 

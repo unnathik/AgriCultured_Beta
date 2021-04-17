@@ -69,5 +69,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
     implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
-
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

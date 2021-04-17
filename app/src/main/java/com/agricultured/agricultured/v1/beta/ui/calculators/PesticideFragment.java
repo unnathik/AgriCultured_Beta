@@ -1,5 +1,6 @@
 package com.agricultured.agricultured.v1.beta.ui.calculators;
 
+import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -24,7 +25,7 @@ public class PesticideFragment extends Fragment {
     private EditText activeIngredient;
     private EditText recommendedQuantity;
     private EditText tankVolume;
-    private Button btnPesticideCalculate;
+    private CardView btnPesticideCalculate;
     private TextView pesticideTextView;
 
     public static PesticideFragment newInstance() {
@@ -60,7 +61,7 @@ public class PesticideFragment extends Fragment {
 
                     double pesticideQuantity = ((tankVolumeDouble * recommendedQuantityDouble) / activeIngredientDouble) * 100;
 
-                    pesticideTextView.setText(Math.round(pesticideQuantity * 100.0) / 100.0 + "ml " + "OR " +
+                    pesticideTextView.setText("Result:\n" + Math.round(pesticideQuantity * 100.0) / 100.0 + "ml " + "or " +
                             Math.round(pesticideQuantity * 100.0) / 100.0 + "g");
                 }
             }

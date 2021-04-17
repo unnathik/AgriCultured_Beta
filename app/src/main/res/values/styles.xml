@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme.ImageClassification" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/tfe_color_primary</item>
-        <item name="colorPrimaryDark">@color/tfe_color_primary_dark</item>
-        <item name="colorAccent">@color/tfe_color_accent</item>
+        <item name="colorPrimary">#3E3E3E</item>
+        <item name="colorPrimaryDark">#3E3E3E</item>
+        <item name="colorAccent">#3E3E3E</item>
     </style>
 
 </resources>

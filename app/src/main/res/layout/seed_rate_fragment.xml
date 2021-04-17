@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.calculators.SeedRateFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/honeycomb_bg"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="40dp">
 
         <TextView
             android:id="@+id/textView11"
@@ -49,18 +51,35 @@
             android:hint="Weight of 1000 Seeds (g)"
             android:inputType="numberDecimal" />
 
-        <Button
+        <androidx.cardview.widget.CardView
             android:id="@+id/seedRateCalculate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculate" />
+            android:layout_marginTop="20dp"
+            android:background="#0A8186"
+            app:cardBackgroundColor="#0A8186"
+            app:cardCornerRadius="20dp">
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#0A8186"
+                android:shadowRadius="0"
+                android:text="Calculate"
+                android:textColor="#fff" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/resultsSeedRate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
             android:gravity="center_horizontal"
-            android:textColor="@color/teal_700" />
+            android:textColor="@color/teal_700"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </FrameLayout>

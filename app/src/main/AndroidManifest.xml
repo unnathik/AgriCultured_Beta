@@ -35,8 +35,6 @@
                 android:value=".HomeActivity" />
         </activity>
         <activity android:name=".RemindersActivity" />
-        <activity android:name=".HomeActivityExpert" />
-        <activity android:name=".ExpertSignInActivity" />
         <activity
             android:name=".ClassifierActivity"
             android:label="@string/app_name"

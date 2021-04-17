@@ -3,39 +3,77 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/honeycomb_bg"
+    android:orientation="vertical"
     tools:context=".DiscussionActivity">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A345B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/white" />
 
     <ListView
         android:id="@+id/lvDiscussion"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_above="@id/linearLayoutMessage">
+        android:layout_height="475dp"
+        android:layout_above="@id/linearLayoutMessage"
+        android:padding="20dp">
 
     </ListView>
 
-    <LinearLayout
-        android:id="@+id/linearLayoutMessage"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="30dp">
 
-        <EditText
-            android:id="@+id/editTextMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Enter your message here"
-            android:inputType="textMultiLine|textPersonName" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonSendMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Send" />
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayoutMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/editTextMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Enter your message here"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/buttonSendMessage"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:shadowRadius="0"
+                    android:text="Send"
+                    android:textColor="@color/teal_700" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 </LinearLayout>

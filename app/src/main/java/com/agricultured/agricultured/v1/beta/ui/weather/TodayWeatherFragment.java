@@ -196,37 +196,37 @@ public class TodayWeatherFragment extends Fragment {
 
                                         if (descID >= 200 && descID < 300) {
                                             suggestionWeather.setText("Take personal safety measures and be wary of potential rain to take measures accordingly.");
-                                            weatherIcon.setImageResource(R.drawable.art_storm);
+                                            weatherIcon.setImageResource(R.drawable.storm);
                                         }
 
                                         if (descID >= 300 && descID < 500) {
                                             suggestionWeather.setText("Even though it is drizzling today, don't completely assume the rains to soak down to plant roots. Make sure your plants still get the water they need if there is run off!");
-                                            weatherIcon.setImageResource(R.drawable.art_light_rain);
+                                            weatherIcon.setImageResource(R.drawable.rain);
                                         }
 
                                         if (descID >= 500 && descID < 600) {
                                             suggestionWeather.setText("Even though it is raining today, don't completely assume the rains to soak down to plant roots. Make sure your plants still get the water they need if there is run off!");
-                                            weatherIcon.setImageResource(R.drawable.art_light_rain);
+                                            weatherIcon.setImageResource(R.drawable.rain);
                                         }
 
                                         if (descID >= 600 && descID < 700) {
                                             suggestionWeather.setText("Snow will insulate the soil, providing the needed soil moisture. Reduce fertilizer usage as snow contains trace amounts of nitrogen. Also, remember 10 inches of snow equal to one inch of water for the crops, so plan your watering cycles accordingly.");
-                                            weatherIcon.setImageResource(R.drawable.art_snow);
+                                            weatherIcon.setImageResource(R.drawable.snow);
                                         }
 
                                         if (descID >= 700 && descID < 800) {
                                             suggestionWeather.setText("Implement normal farming practices. No special weather-based recommendations for now!");
-                                            weatherIcon.setImageResource(R.drawable.art_fog);
+                                            weatherIcon.setImageResource(R.drawable.fog);
                                         }
 
                                         if (descID >= 800 && descID < 900) {
                                             suggestionWeather.setText("Implement normal farming practices. No special weather-based recommendations for now!");
-                                            weatherIcon.setImageResource(R.drawable.art_clear);
+                                            weatherIcon.setImageResource(R.drawable.clear);
                                         }
 
                                         if (descID >= 900 && descID < 1000) {
                                             suggestionWeather.setText("Take personal safety measures and be wary of potential rain to take measures accordingly. Water when it is windy.");
-                                            weatherIcon.setImageResource(R.drawable.art_storm);
+                                            weatherIcon.setImageResource(R.drawable.storm);
                                         }
 
                                     } catch (JSONException e) {
@@ -327,37 +327,42 @@ public class TodayWeatherFragment extends Fragment {
 
                     if (descID >= 200 && descID < 300) {
                         suggestionWeather.setText("Take personal safety measures and be wary of potential rain to take measures accordingly.");
-                        weatherIcon.setImageResource(R.drawable.art_storm);
+                        weatherIcon.setImageResource(R.drawable.storm);
                     }
 
                     if (descID >= 300 && descID < 500) {
                         suggestionWeather.setText("Even though it is drizzling today, don't completely assume the rains to soak down to plant roots. Make sure your plants still get the water they need if there is run off!");
-                        weatherIcon.setImageResource(R.drawable.art_light_rain);
+                        weatherIcon.setImageResource(R.drawable.rain);
                     }
 
                     if (descID >= 500 && descID < 600) {
                         suggestionWeather.setText("Even though it is raining today, don't completely assume the rains to soak down to plant roots. Make sure your plants still get the water they need if there is run off!");
-                        weatherIcon.setImageResource(R.drawable.art_light_rain);
+                        weatherIcon.setImageResource(R.drawable.rain);
                     }
 
                     if (descID >= 600 && descID < 700) {
                         suggestionWeather.setText("Snow will insulate the soil, providing the needed soil moisture. Reduce fertilizer usage as snow contains trace amounts of nitrogen. Also, remember 10 inches of snow equal to one inch of water for the crops, so plan your watering cycles accordingly.");
-                        weatherIcon.setImageResource(R.drawable.art_snow);
+                        weatherIcon.setImageResource(R.drawable.snow);
                     }
 
                     if (descID >= 700 && descID < 800) {
                         suggestionWeather.setText("Implement normal farming practices. No special weather-based recommendations for now!");
-                        weatherIcon.setImageResource(R.drawable.art_fog);
+                        weatherIcon.setImageResource(R.drawable.fog);
                     }
 
-                    if (descID >= 800 && descID < 900) {
+                    if (descID >= 800 && descID < 802) {
                         suggestionWeather.setText("Implement normal farming practices. No special weather-based recommendations for now!");
-                        weatherIcon.setImageResource(R.drawable.art_clear);
+                        weatherIcon.setImageResource(R.drawable.clear);
+                    }
+
+                    if (descID >= 802 && descID < 900) {
+                        suggestionWeather.setText("Implement normal farming practices. No special weather-based recommendations for now!");
+                        weatherIcon.setImageResource(R.drawable.cloudy);
                     }
 
                     if (descID >= 900 && descID < 1000) {
                         suggestionWeather.setText("Take personal safety measures and be wary of potential rain to take measures accordingly. Water when it is windy.");
-                        weatherIcon.setImageResource(R.drawable.art_storm);
+                        weatherIcon.setImageResource(R.drawable.storm);
                     }
 
                 } catch (JSONException e) {

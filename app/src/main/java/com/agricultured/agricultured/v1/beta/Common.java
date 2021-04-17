@@ -12,7 +12,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Common {
-    public static ExpertUserModel currentExpertUser;
     public static final String APP_ID = "4a8018b7b1640836e960924451e3d0b4";
 
     public static void setSpanString(String welcome, String name, TextView txt_user) {
@@ -24,8 +23,6 @@ public class Common {
         builder.append(spannableString);
         txt_user.setText(builder, TextView.BufferType.SPANNABLE);
     }
-    
-    public static final String EXPERT_REF = "Expert";
 
     public static String convertUnixToDate(int dt) {
         Date date = new Date(dt * 1000L);

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.agricultured.agricultured.v1.beta.ContactUsFragment;
 import com.agricultured.agricultured.v1.beta.R;
 import com.agricultured.agricultured.v1.beta.ui.calculators.CalculatorsFragment;
 import com.agricultured.agricultured.v1.beta.ui.communitychat.CommunityChatFragment;
@@ -20,6 +21,7 @@ public class ChatFragment extends Fragment {
 
     private ChatViewModel mViewModel;
     private CardView communityChatNav;
+    private CardView contactUsNav;
 
     public static ChatFragment newInstance() {
         return new ChatFragment();
@@ -31,6 +33,7 @@ public class ChatFragment extends Fragment {
         View root = inflater.inflate(R.layout.chat_fragment, container, false);
 
         communityChatNav = root.findViewById(R.id.communityChatBtn);
+        contactUsNav = root.findViewById(R.id.contactUs);
 
         communityChatNav.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +41,16 @@ public class ChatFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = getActivity()
                         .getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, new CommunityChatFragment());
+                fragmentTransaction.commit();
+            }
+        });
+
+        contactUsNav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new ContactUsFragment());
                 fragmentTransaction.commit();
             }
         });

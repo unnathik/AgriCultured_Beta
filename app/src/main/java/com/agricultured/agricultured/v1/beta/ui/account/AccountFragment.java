@@ -7,21 +7,34 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.agricultured.agricultured.v1.beta.MainActivity;
 import com.agricultured.agricultured.v1.beta.R;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AccountFragment extends Fragment {
 
     private AccountViewModel mViewModel;
     private Button signOutButton;
+    private TextView googleName;
+    private TextView googleEmail;
+    private CircleImageView googleImage;
 
     public static AccountFragment newInstance() {
         return new AccountFragment();
@@ -31,8 +44,16 @@ public class AccountFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.account_fragment, container, false);
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
 
         signOutButton = root.findViewById(R.id.sign_out_button);
+        googleImage = root.findViewById(R.id.google_image);
+        googleName = root.findViewById(R.id.google_name);
+        googleEmail = root.findViewById(R.id.google_email);
+
+        googleName.setText(acct.getDisplayName());
+        googleEmail.setText(acct.getEmail());
+        Picasso.get().load(acct.getPhotoUrl()).into(googleImage);
 
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
