@@ -17,7 +17,7 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculate the exact quantity of pesticides/fungicides/pesticides required for your farm based on the different companies' active ingredients to ensure appropriate use of these resources." />
+            android:text="Calculate the exact quantity of pesticides/fungicides/insecticides required for your farm based on the different companies' active ingredients to ensure appropriate use of these resources." />
 
         <EditText
             android:id="@+id/activeIngredient"

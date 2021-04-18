@@ -28,7 +28,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="20dp"
             app:cardCornerRadius="10dp">
 
             <LinearLayout
@@ -41,6 +40,7 @@
                     android:id="@+id/google_image"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
@@ -50,7 +50,8 @@
                     android:layout_gravity="center_horizontal"
                     android:foregroundGravity="center_horizontal"
                     android:gravity="center_horizontal"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/google_email"
@@ -66,10 +67,10 @@
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:background="#AD7B4C"
             app:cardBackgroundColor="#AD7B4C"
-            app:cardCornerRadius="20dp">
+            app:cardCornerRadius="25dp">
 
             <Button
                 android:id="@+id/sign_out_button"
